@@ -12,18 +12,23 @@
 
     p{
         color: var(--grey);
+        font-weight: 600;
+        line-height: helpers.rem-calc(28);
     }
 
     form{
         input{
             border: none;
             color: var(--grey);
+            font-weight: 600;
         }
 
         button{
             background-color: var(--nightBlue);
             border: none;
-            color: var(--white)
+            color: var(--white);
+            font-weight: 600;
+            line-height: helpers.rem-calc(14);
         }
     }
 }
