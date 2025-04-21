@@ -1,0 +1,28 @@
+/* =============
+    Process
+============= */
+@use "../helpers";
+
+#process{
+    background-color: var(--white);
+    
+    h1{
+        color: var(--nightBlue);
+    }
+
+    p{
+        color: var(--grey);
+    }
+
+    ul{
+        li{
+            h2{
+                color: var(--nightBlue);
+            }
+
+            p{
+                color: var(--grey);
+            }
+        }
+    }
+}

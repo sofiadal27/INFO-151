@@ -397,6 +397,44 @@ textarea {
   color: var(--nightBlue);
 }
 /* =============
+    Process
+============= */
+#process {
+  background-color: var(--white);
+}
+#process h1 {
+  color: var(--nightBlue);
+}
+#process p {
+  color: var(--grey);
+}
+#process ul li h2 {
+  color: var(--nightBlue);
+}
+#process ul li p {
+  color: var(--grey);
+}
+
+/* =============
+    About
+============= */
+#about {
+  background-color: var(--white);
+}
+#about section h1 {
+  color: var(--nightBlue);
+}
+#about section p {
+  color: var(--grey);
+}
+#about section ul li h3 {
+  color: var(--nightBlue);
+}
+#about section ul li p {
+  color: var(--grey);
+}
+
+/* =============
     Packages
 ============= */
 #packages {
@@ -434,6 +472,19 @@ textarea {
 }
 #packages #package-card-container .selected {
   background-color: var(--white);
+}
+
+/* =============
+    Communication
+============= */
+#communication {
+  background-color: var(--white);
+}
+#communication h1 {
+  color: var(--ni);
+}
+#communication p {
+  color: var(--grey);
 }
 
 /* =============

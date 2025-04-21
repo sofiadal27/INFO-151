@@ -1,0 +1,30 @@
+/* =============
+    About
+============= */
+@use "../helpers";
+
+#about{
+    background-color: var(--white);
+
+    section{
+        h1{
+            color: var(--nightBlue);
+        }
+
+        p{
+            color: var(--grey);
+        }
+
+        ul{
+            li{
+                h3{
+                    color: var(--nightBlue);
+                }
+
+                p{
+                    color: var(--grey);
+                }
+            }
+        }
+    }
+}
