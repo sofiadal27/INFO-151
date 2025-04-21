@@ -5,6 +5,7 @@
 
 #communication{
     background-color: var(--white);
+    padding: 107px 24px;
 
     // h1{
     //     color: var(--ni)
@@ -12,5 +13,9 @@
 
     p{
         color: var(--grey);
+        font-weight: 600;
+        line-height: helpers.rem-calc(28);
+        margin-top: 24px;
+        margin-bottom: 48px;
     }
 }

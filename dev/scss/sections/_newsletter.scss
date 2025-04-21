@@ -4,31 +4,43 @@
 @use "../helpers";
 
 #newsletter{
-    background-color: var(--lilyWhite);
+    padding: 40px 24px;
 
-    // h1{
-    //     color: var(--nightBlue);
-    // }
+    #newsletter-content{
+        background-color: var(--lilyWhite);
+        padding: 60px 16px;
 
-    p{
-        color: var(--grey);
-        font-weight: 600;
-        line-height: helpers.rem-calc(28);
-    }
+        // h1{
+        //     color: var(--nightBlue);
+        // }
 
-    form{
-        input{
-            border: none;
+        p{
             color: var(--grey);
             font-weight: 600;
+            line-height: helpers.rem-calc(28);
+            margin: 16px 0;
         }
 
-        button{
-            background-color: var(--nightBlue);
-            border: none;
-            color: var(--white);
-            font-weight: 600;
-            line-height: helpers.rem-calc(14);
+        form{
+            input{
+                border: none;
+                color: var(--grey);
+                font-weight: 600;
+                width: 100%;
+                padding: 24px 8px;
+                box-sizing: border-box;
+                border-radius: 8px;
+                margin-bottom: 16px;
+            }
+
+            div{
+                text-align: right;
+            }
+        }
+
+        // week 4 code
+        aside{
+            display: none;
         }
     }
 }

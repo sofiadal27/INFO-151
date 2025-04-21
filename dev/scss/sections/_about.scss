@@ -5,24 +5,35 @@
 
 #about{
     background-color: var(--white);
+    padding: 60px 24px;
 
     section{
-        // h1{
-        //     color: var(--nightBlue);
-        // }
+        margin-bottom: 70px;
+        
+        h1{
+            margin-bottom: 30px;
+        }
 
         p{
             color: var(--grey);
+            font-weight: 600;
+            line-height: helpers.rem-calc(28);
         }
 
         ul{
             li{
+                margin-top: 16px;
                 h3{
                     color: var(--nightBlue);
+                    font-size: helpers.rem-calc(20);
+                    font-weight: 600;
+                    line-height: helpers.rem-calc(28);
                 }
 
                 p{
                     color: var(--grey);
+                    font-weight: 600;
+                    line-height: helpers.rem-calc(28);
                 }
             }
         }

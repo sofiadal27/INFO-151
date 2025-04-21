@@ -331,6 +331,24 @@ html {
 }
 
 /* ---------------- Media Queries ---------------- */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+ul li {
+  list-style: none;
+}
+
 .img-scaler {
   width: 100%;
 }
@@ -353,6 +371,26 @@ body {
 ============= */
 a {
   text-decoration: none;
+}
+
+.nightBlue-link {
+  background-color: var(--nightBlue);
+  color: var(--white);
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 22px 36px;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+.nightBlue-btn {
+  background-color: var(--nightBlue);
+  color: var(--white);
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 22px 36px;
+  border-radius: 6px;
+  border: none;
 }
 
 /* =============
@@ -389,24 +427,28 @@ textarea {
 ============= */
 #hero {
   background-color: var(--lilyWhite);
+  padding: 56px 24px;
 }
 #hero section article p {
   color: var(--grey);
   font-weight: 600;
   line-height: 1.75rem;
-}
-#hero section article a:link, #hero section article a:visited {
-  background-color: var(--nightBlue);
-  color: var(--white);
-  font-size: 0.875rem;
-  font-weight: 600;
+  margin-top: 24px;
+  margin-bottom: 24px;
 }
 #hero section article button {
   background-color: var(--white);
   border: none;
+  height: 60px;
+  width: 60px;
+  border-radius: 100%;
+  margin-left: 30px;
 }
 #hero section #hero-card {
   background-color: var(--snowdrop);
+  margin-top: 70px;
+  padding: 24px 20px;
+  border-radius: 12px;
 }
 #hero section #hero-card h5 {
   color: var(--nightBlue);
@@ -416,22 +458,36 @@ textarea {
 #hero section #hero-card p {
   font-size: 0.875rem;
   font-weight: 600;
-  line-height: 1.5rem;
 }
 /* =============
     Process
 ============= */
 #process {
   background-color: var(--white);
+  padding: 110px 24px;
+}
+#process h1 {
+  margin-bottom: 12px;
 }
 #process p {
   color: var(--grey);
+  font-weight: 600;
+  line-height: 1.75rem;
+}
+#process ul li {
+  margin-top: 24px;
+  padding: 30px;
 }
 #process ul li h2 {
   color: var(--nightBlue);
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 2.125rem;
 }
 #process ul li p {
   color: var(--grey);
+  font-weight: 600;
+  line-height: 1.75rem;
 }
 
 /* =============
@@ -439,15 +495,32 @@ textarea {
 ============= */
 #about {
   background-color: var(--white);
+  padding: 60px 24px;
+}
+#about section {
+  margin-bottom: 70px;
+}
+#about section h1 {
+  margin-bottom: 30px;
 }
 #about section p {
   color: var(--grey);
+  font-weight: 600;
+  line-height: 1.75rem;
+}
+#about section ul li {
+  margin-top: 16px;
 }
 #about section ul li h3 {
   color: var(--nightBlue);
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.75rem;
 }
 #about section ul li p {
   color: var(--grey);
+  font-weight: 600;
+  line-height: 1.75rem;
 }
 
 /* =============
@@ -455,30 +528,45 @@ textarea {
 ============= */
 #packages {
   background-color: var(--lilyWhite);
+  padding: 100px 24px;
 }
-#packages #package-button-container {
+#packages #top-content {
+  text-align: center;
+}
+#packages #top-content #package-button-container {
   background-color: var(--white);
+  margin: 24px 0;
+  padding: 8px;
+  border-radius: 10px;
+  display: inline-block;
 }
-#packages #package-button-container button {
+#packages #top-content #package-button-container button {
   border: none;
 }
-#packages #package-button-container #left-arrow {
+#packages #top-content #package-button-container #left-arrow {
   background-color: var(--white);
   color: var(--grey);
+  padding: 13px 18px;
 }
-#packages #package-button-container #right-arrow {
+#packages #top-content #package-button-container #right-arrow {
   background-color: var(--aqua);
   color: var(--white);
+  padding: 13px 18px;
+  border-radius: 8px;
 }
 #packages #package-card-container .package-card {
   background-color: var(--ghostWhite);
   border: 1px solid var(--white);
+  margin-bottom: 48px;
+  padding: 16px;
+  border-radius: 14px;
 }
 #packages #package-card-container .package-card p {
   color: var(--black);
   font-weight: 600;
   font-size: 1.25rem;
   line-height: 1.75rem;
+  margin: 20px 0 16px;
 }
 #packages #package-card-container .package-card h4 {
   color: var(--grey);
@@ -501,31 +589,46 @@ textarea {
 ============= */
 #communication {
   background-color: var(--white);
+  padding: 107px 24px;
 }
 #communication p {
   color: var(--grey);
+  font-weight: 600;
+  line-height: 1.75rem;
+  margin-top: 24px;
+  margin-bottom: 48px;
 }
 
 /* =============
     Newsletter
 ============= */
 #newsletter {
-  background-color: var(--lilyWhite);
+  padding: 40px 24px;
 }
-#newsletter p {
+#newsletter #newsletter-content {
+  background-color: var(--lilyWhite);
+  padding: 60px 16px;
+}
+#newsletter #newsletter-content p {
   color: var(--grey);
   font-weight: 600;
   line-height: 1.75rem;
+  margin: 16px 0;
 }
-#newsletter form input {
+#newsletter #newsletter-content form input {
   border: none;
   color: var(--grey);
   font-weight: 600;
+  width: 100%;
+  padding: 24px 8px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 8px;
+  margin-bottom: 16px;
 }
-#newsletter form button {
-  background-color: var(--nightBlue);
-  border: none;
-  color: var(--white);
-  font-weight: 600;
-  line-height: 0.875rem;
+#newsletter #newsletter-content form div {
+  text-align: right;
+}
+#newsletter #newsletter-content aside {
+  display: none;
 }
