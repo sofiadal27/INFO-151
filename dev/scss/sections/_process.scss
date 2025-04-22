@@ -9,12 +9,14 @@
     
     h1{
         margin-bottom: 12px;
+        text-align: center;
     }
 
-    p{
+    #section-description{
         color: var(--grey);
         font-weight: 600;
         line-height: helpers.rem-calc(28);
+        text-align: center;
     }
 
     ul{
@@ -26,12 +28,14 @@
                 font-size: helpers.rem-calc(24);
                 font-weight: 600;
                 line-height: helpers.rem-calc(34);
+                margin-top: 50px;
             }
 
             p{
                 color: var(--grey);
                 font-weight: 600;
                 line-height: helpers.rem-calc(28);
+                margin-top: 10px;
             }
         }
     }
