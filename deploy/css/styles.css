@@ -538,6 +538,11 @@ textarea {
   background-color: var(--white);
   padding: 110px 24px;
 }
+@media (min-width: 1200px) {
+  #process {
+    padding: 110px 120px;
+  }
+}
 #process h1 {
   margin-bottom: 12px;
   text-align: center;
@@ -548,29 +553,76 @@ textarea {
   line-height: 1.75rem;
   text-align: center;
 }
-#process ul li {
+@media (min-width: 768px) {
+  #process #section-description {
+    max-width: 431px;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 1200px) {
+  #process #section-description {
+    max-width: 431px;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 768px) {
+  #process #container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 24px 1fr 24px 1fr 24px 1fr;
+    grid-template-columns: repeat(4, 1fr);
+    -ms-grid-rows: auto 24px auto;
+        grid-template-areas: "card-1 card-1 card-2 card-2" "...    card-3 card-3 ...";
+    gap: 24px;
+  }
+}
+@media (min-width: 1200px) {
+  #process #container {
+    max-width: 1440px;
+    -ms-grid-columns: 1fr 24px 1fr 24px 1fr;
+    grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: "card-1 card-2 card-3";
+    gap: 24px;
+  }
+}
+#process #container li {
   margin-top: 24px;
   padding: 30px;
   border: 1px solid var(--lilyWhite);
   border-radius: 12px;
   background-color: var(--white);
 }
-#process ul li h2 {
+#process #container li h2 {
   color: var(--nightBlue);
   font-size: 1.5rem;
   font-weight: 600;
   line-height: 2.125rem;
   margin-top: 50px;
 }
-#process ul li p {
+#process #container li p {
   color: var(--grey);
   font-weight: 600;
   line-height: 1.75rem;
   margin-top: 10px;
 }
-#process ul #selected {
+@media (min-width: 768px) {
+  #process #container #card-1 {
+    grid-area: card-1;
+  }
+}
+#process #container #card-2 {
   -webkit-box-shadow: 0px 30px 58px 0px rgba(3, 3, 32, 0.1);
           box-shadow: 0px 30px 58px 0px rgba(3, 3, 32, 0.1);
+}
+@media (min-width: 768px) {
+  #process #container #card-2 {
+    grid-area: card-2;
+  }
+}
+@media (min-width: 768px) {
+  #process #container #card-3 {
+    grid-area: card-3;
+  }
 }
 
 /* =============
@@ -580,30 +632,102 @@ textarea {
   background-color: var(--white);
   padding: 60px 24px;
 }
-#about section {
+@media (min-width: 1200px) {
+  #about {
+    padding: 60px 135px;
+  }
+}
+@media (min-width: 768px) {
+  #about #about-content-container {
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: "about-content" "about-img";
+  }
+}
+@media (min-width: 1200px) {
+  #about #about-content-container {
+    -ms-grid-columns: 40% auto;
+    grid-template-columns: 40% auto;
+        grid-template-areas: "about-content about-img";
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+#about #about-content-container section {
   margin-bottom: 70px;
 }
-#about section h1 {
+@media (min-width: 768px) {
+  #about #about-content-container section {
+    grid-area: about-content;
+    padding: 0 15vw;
+  }
+}
+@media (min-width: 1200px) {
+  #about #about-content-container section {
+    padding: 0;
+  }
+}
+#about #about-content-container section h1 {
   margin-bottom: 30px;
 }
-#about section p {
+#about #about-content-container section p {
   color: var(--grey);
   font-weight: 600;
   line-height: 1.75rem;
 }
-#about section ul li {
+#about #about-content-container section ul li {
   margin-top: 16px;
 }
-#about section ul li h3 {
+@media (min-width: 1200px) {
+  #about #about-content-container section ul li {
+    margin-top: 35px;
+  }
+}
+#about #about-content-container section ul li h3 {
   color: var(--nightBlue);
   font-size: 1.25rem;
   font-weight: 600;
   line-height: 1.75rem;
 }
-#about section ul li p {
+#about #about-content-container section ul li p {
   color: var(--grey);
   font-weight: 600;
   line-height: 1.75rem;
+}
+@media (min-width: 768px) {
+  #about #about-content-container aside {
+    grid-area: about-img;
+  }
+}
+@media (min-width: 768px) {
+  #about #about-content-container section {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  #about #about-content-container aside {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+}
+@media (min-width: 1200px) {
+  #about #about-content-container section {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  #about #about-content-container aside {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+}
+@media (min-width: 1200px) {
+  #about #about-content-container aside {
+    display: block;
+    margin-top: -20px;
+  }
+}
+#about #about-content-container aside img {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 /* =============
@@ -645,6 +769,21 @@ textarea {
     grid-template-columns: repeat(4, 1fr);
         grid-template-areas: "card-1 card-1 card-2 card-2" "...    card-3 card-3 ...";
   }
+  #packages #package-card-container > #card-1 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+  }
+  #packages #package-card-container > #card-2 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 2;
+  }
+  #packages #package-card-container > #card-3 {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 2;
+  }
 }
 @media (min-width: 1200px) {
   #packages #package-card-container {
@@ -654,6 +793,21 @@ textarea {
     grid-template-columns: repeat(3, 1fr);
         grid-template-areas: "card-1 card-2 card-3";
     gap: 45px;
+  }
+  #packages #package-card-container > #card-1 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+  }
+  #packages #package-card-container > #card-2 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+  }
+  #packages #package-card-container > #card-3 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 5;
+    -ms-grid-column-span: 1;
   }
 }
 #packages #package-card-container .package-card {
@@ -701,24 +855,74 @@ textarea {
   }
 }
 @media (min-width: 768px) {
+  #process #container #card-1 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+  }
+  #process #container #card-2 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 5;
+    -ms-grid-column-span: 3;
+  }
+  #process #container #card-3 {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 3;
+  }
   #packages #package-card-container #card-1 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+  }
+  #packages #package-card-container > #card-1 {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
     -ms-grid-column-span: 2;
   }
   #packages #package-card-container #card-2 {
     -ms-grid-row: 1;
+    -ms-grid-column: 5;
+    -ms-grid-column-span: 3;
+  }
+  #packages #package-card-container > #card-2 {
+    -ms-grid-row: 1;
     -ms-grid-column: 3;
     -ms-grid-column-span: 2;
   }
   #packages #package-card-container #card-3 {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 3;
+  }
+  #packages #package-card-container > #card-3 {
     -ms-grid-row: 2;
     -ms-grid-column: 2;
     -ms-grid-column-span: 2;
   }
 }
 @media (min-width: 1200px) {
+  #process #container #card-1 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+  }
+  #process #container #card-2 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+  }
+  #process #container #card-3 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 5;
+    -ms-grid-column-span: 1;
+  }
   #packages #package-card-container #card-1 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+  }
+  #packages #package-card-container > #card-1 {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
     -ms-grid-column-span: 1;
@@ -728,7 +932,17 @@ textarea {
     -ms-grid-column: 3;
     -ms-grid-column-span: 1;
   }
+  #packages #package-card-container > #card-2 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+  }
   #packages #package-card-container #card-3 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 5;
+    -ms-grid-column-span: 1;
+  }
+  #packages #package-card-container > #card-3 {
     -ms-grid-row: 1;
     -ms-grid-column: 5;
     -ms-grid-column-span: 1;
@@ -743,11 +957,16 @@ textarea {
   padding: 107px 24px;
   text-align: center;
 }
+@media (min-width: 1200px) {
+  #communication {
+    padding: 107px 235px;
+  }
+}
 #communication p {
   color: var(--grey);
   font-weight: 600;
   line-height: 1.75rem;
-  margin-top: 24px;
+  margin-top: 16px;
   margin-bottom: 48px;
 }
 

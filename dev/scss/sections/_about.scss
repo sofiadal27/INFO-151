@@ -7,34 +7,88 @@
     background-color: var(--white);
     padding: 60px 24px;
 
-    section{
-        margin-bottom: 70px;
-        
-        h1{
-            margin-bottom: 30px;
+    @include helpers.xl{
+        padding: 60px 135px;
+    }
+
+    #about-content-container{
+        @include helpers.md{
+            display: grid;
+            grid-template-areas: "about-content"
+                                "about-img";
+        }
+    
+        @include helpers.xl{
+            grid-template-columns: 40% auto;
+            grid-template-areas: "about-content about-img";
+    
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
-        p{
-            color: var(--grey);
-            font-weight: 600;
-            line-height: helpers.rem-calc(28);
+        section{
+            margin-bottom: 70px;
+
+            @include helpers.md{
+                grid-area: about-content;
+                padding: 0 15vw;
+            }
+
+            // @include helpers.lg{
+            //     padding: 0 25vw;
+            // }
+
+            @include helpers.xl{
+                padding: 0;
+            }
+            
+            h1{
+                margin-bottom: 30px;
+            }
+
+            p{
+                color: var(--grey);
+                font-weight: 600;
+                line-height: helpers.rem-calc(28);
+            }
+
+            ul{
+                li{
+                    margin-top: 16px;
+
+                    @include helpers.xl{
+                        margin-top: 35px;
+                    }
+
+                    h3{
+                        color: var(--nightBlue);
+                        font-size: helpers.rem-calc(20);
+                        font-weight: 600;
+                        line-height: helpers.rem-calc(28);
+                    }
+
+                    p{
+                        color: var(--grey);
+                        font-weight: 600;
+                        line-height: helpers.rem-calc(28);
+                    }
+                }
+            }
         }
 
-        ul{
-            li{
-                margin-top: 16px;
-                h3{
-                    color: var(--nightBlue);
-                    font-size: helpers.rem-calc(20);
-                    font-weight: 600;
-                    line-height: helpers.rem-calc(28);
-                }
+        aside{
+            @include helpers.md{
+                grid-area: about-img;
+            }
 
-                p{
-                    color: var(--grey);
-                    font-weight: 600;
-                    line-height: helpers.rem-calc(28);
-                }
+            @include helpers.xl{
+                display: block;
+                margin-top: -20px;
+            }
+
+            img{
+                //margin-top: -120px;
+                object-fit: cover;
             }
         }
     }
