@@ -22,5 +22,9 @@
         line-height: helpers.rem-calc(28);
         margin-top: 16px;
         margin-bottom: 48px;
+
+        @include helpers.md{
+            padding: 0 8vw;
+        }
     }
 }

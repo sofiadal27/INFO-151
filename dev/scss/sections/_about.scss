@@ -53,6 +53,13 @@
             }
 
             ul{
+
+                @include helpers.md{
+                    display: grid;
+                    grid-template-columns: 50% auto;
+                    gap: 16px;
+                }
+
                 li{
                     margin-top: 16px;
 
