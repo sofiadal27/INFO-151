@@ -55,29 +55,42 @@
             ul{
 
                 @include helpers.md{
-                    display: grid;
+                    display: block;
                     grid-template-columns: 50% auto;
+                    gap: 16px;
+                }
+
+                @include helpers.xl{
+                    display: block;
                     gap: 16px;
                 }
 
                 li{
                     margin-top: 16px;
+                    display: flex;
+                    align-items: flex-start;
+                    gap: 16px;
 
                     @include helpers.xl{
+                        display: flex;
+                        align-items: flex-start;
+                        gap: 16px;
                         margin-top: 35px;
                     }
 
-                    h3{
-                        color: var(--nightBlue);
-                        font-size: helpers.rem-calc(20);
-                        font-weight: 600;
-                        line-height: helpers.rem-calc(28);
-                    }
-
-                    p{
-                        color: var(--grey);
-                        font-weight: 600;
-                        line-height: helpers.rem-calc(28);
+                    #about-list-item{
+                        h3{
+                            color: var(--nightBlue);
+                            font-size: helpers.rem-calc(20);
+                            font-weight: 600;
+                            line-height: helpers.rem-calc(28);
+                        }
+    
+                        p{
+                            color: var(--grey);
+                            font-weight: 600;
+                            line-height: helpers.rem-calc(28);
+                        }
                     }
                 }
             }

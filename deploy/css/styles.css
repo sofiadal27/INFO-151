@@ -689,28 +689,47 @@ textarea {
 }
 @media (min-width: 768px) {
   #about #about-content-container section ul {
-    display: -ms-grid;
-    display: grid;
+    display: block;
     -ms-grid-columns: 50% 16px auto;
     grid-template-columns: 50% auto;
     gap: 16px;
   }
 }
+@media (min-width: 1200px) {
+  #about #about-content-container section ul {
+    display: block;
+    gap: 16px;
+  }
+}
 #about #about-content-container section ul li {
   margin-top: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 16px;
 }
 @media (min-width: 1200px) {
   #about #about-content-container section ul li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    gap: 16px;
     margin-top: 35px;
   }
 }
-#about #about-content-container section ul li h3 {
+#about #about-content-container section ul li #about-list-item h3 {
   color: var(--nightBlue);
   font-size: 1.25rem;
   font-weight: 600;
   line-height: 1.75rem;
 }
-#about #about-content-container section ul li p {
+#about #about-content-container section ul li #about-list-item p {
   color: var(--grey);
   font-weight: 600;
   line-height: 1.75rem;
