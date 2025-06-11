@@ -1,0 +1,26 @@
+/* =============
+    Home
+============= */
+@use "../helpers";
+
+#home{
+    background-color: var(--lightCyan);
+    padding: 56px 24px;
+
+    section{
+
+        h1{
+            text-align: center;
+            color: var(--coolGrey);
+        }
+
+        p{
+            text-align: center;
+        }
+
+    }
+
+    aside{
+ 
+    }
+}

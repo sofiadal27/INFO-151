@@ -316,6 +316,17 @@ template {
 :root {
   --black: #000000;
   --white: #ffffff;
+  --lightCyan: #e0ffff;
+  --grey: #808080;
+  --aqua: #00ffff;
+  --coolGrey: #8c92ac;
+  --darkGreySlate: #2f4f4f;
+  --darkMagenta: #8a0079;
+  --royalPurple: #5d0178;
+  --yaleBlue: #0f4c81;
+  --cerulean: #007ba7;
+  --peach: #ffdab9;
+  --cream: #fffdd0;
 }
 
 /* ---------------- Font Sizing ---------------- */
@@ -324,6 +335,28 @@ html {
 }
 
 /* ---------------- Media Queries ---------------- */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+ul li {
+  list-style: none;
+}
+
+.img-scaler {
+  width: 100%;
+}
+
 /* =============
     Typography
 ============= */
@@ -359,3 +392,86 @@ textarea {
 /* =============
     Footer
 ============= */
+/* =============
+    Home
+============= */
+#home {
+  background-color: var(--lightCyan);
+  padding: 56px 24px;
+}
+#home section h1 {
+  text-align: center;
+  color: var(--coolGrey);
+}
+#home section p {
+  text-align: center;
+}
+/* =============
+    Associations
+============= */
+#associations {
+  background-color: var(--lightCyan);
+  padding: 56px 24px;
+  margin: 0 auto;
+}
+#associations h1 {
+  text-align: center;
+  margin-bottom: 32px;
+  color: var(--coolGrey);
+}
+#associations p {
+  text-align: center;
+  margin-bottom: 32px;
+}
+#associations #association-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 24px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+#associations #association-list li {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 400px;
+          flex: 1 1 400px;
+  max-width: 500px;
+  border-radius: 10px;
+  padding: 24px;
+  -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+#associations #association-list li h3 {
+  margin-top: 0;
+  font-size: 21px;
+}
+#associations #association-list li p {
+  font-size: 16px;
+  line-height: 26px;
+  margin-top: 8px;
+}
+#associations #association-list li a {
+  display: inline-block;
+  margin-top: 12px;
+  font-weight: 600;
+}
+
+/* =============
+    Contact
+============= */
+#contact {
+  text-align: center;
+  padding: 30px 20px;
+}
+#contact h1 {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+#contact p {
+  font-size: 19px;
+  margin-bottom: 20px;
+}

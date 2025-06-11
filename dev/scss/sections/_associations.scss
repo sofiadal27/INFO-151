@@ -1,0 +1,55 @@
+/* =============
+    Associations
+============= */
+@use "../helpers";
+
+#associations{
+    background-color: var(--lightCyan);
+    padding: 56px 24px;
+    margin: 0 auto;
+
+    h1 {
+        text-align: center;
+        margin-bottom: 32px;
+        color: var(--coolGrey);
+    }
+
+    p {
+        text-align: center;
+        margin-bottom: 32px;
+    }
+
+    #association-list{
+        display: flex;         
+        gap: 24px;                 
+        justify-content: center;   
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li{
+            flex: 1 1 400px;         
+            max-width: 500px;
+            border-radius: 10px;
+            padding: 24px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+
+            h3{
+                margin-top: 0;
+                font-size: 21px;
+            }
+
+            p{
+                font-size: 16px;
+                line-height: 26px;
+                margin-top: 8px;
+            }
+
+            a{
+                display: inline-block;
+                margin-top: 12px;
+                font-weight: 600;
+            }
+        }
+    }
+}
