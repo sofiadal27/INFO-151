@@ -4,8 +4,19 @@
 @use "../helpers";
 
 #home{
-    background-color: var(--paleYellow);
-    padding: 56px 24px;
+    position: relative;
+
+    canvas#canvas-complex {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+  }
+
+    padding: 56px 56px;
 
     @include helpers.sm{
         display: grid;
@@ -37,12 +48,14 @@
 
         h1{
             text-align: center;
-            color: var(--hotPink);
+            color: var(--white);
             margin-bottom: 20px;
         }
 
         p{
             text-align: center;
+            color: var(--white);
+            margin-bottom: 32px;
         }
     }
 
@@ -62,17 +75,17 @@
 
             @include helpers.sm{
                 width: 100%;
-                max-width: 300px;
+                max-width: 100px;
             }
 
             @include helpers.md{
                 width: 100%;
-                max-width: 400px;
+                max-width: 300px;
             }
 
             @include helpers.lg{
                 width: 100%;
-                max-width: 500px;
+                max-width: 400px;
             }
         }
     }

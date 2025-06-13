@@ -2,3 +2,52 @@
     Navigation
 ============= */
 @use "../helpers";
+
+#burger-container{
+    text-align: right;
+
+    button{
+        color: var(--darkPink);
+        background-color: transparent;
+        border: none;
+    }
+}
+
+a{
+    text-decoration: none;
+}
+
+nav{
+    display: none;
+
+    @include helpers.md{
+        display: block;
+    }
+
+    ul{
+
+        @include helpers.sm{
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        li{
+            text-align: right;
+            border-bottom: 1px solid var(--darkPink);
+
+            @include helpers.md{
+                border-bottom: none;
+            }
+
+            a{
+                color: var(--darkPink);
+                padding: 10px;
+                display: inline-block;
+
+                &:hover {
+                    color: var(--reallyDarkPink);
+                }
+            }
+        }
+    }
+}

@@ -2,3 +2,20 @@
     Header
 ============= */
 @use "../helpers";
+
+#burger-container {
+    grid-area: burger;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    @include helpers.md {
+        display: none;
+    }
+
+    button {
+        color: var(--darkPink);
+        background-color: transparent;
+        border: none;
+    }
+}

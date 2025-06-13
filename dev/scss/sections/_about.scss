@@ -3,17 +3,17 @@
 ============= */
 @use "../helpers";
 
-#about {
+#about{
   background-color: var(--hotPink);
   padding: 56px 24px;
 
-  h1 {
+  h1{
     text-align: center;
     margin-bottom: 32px;
     color: var(--white);
   }
 
-  .intro {
+  .intro{
     text-align: center;
     margin: 32px auto;
     max-width: 800px;
@@ -21,7 +21,7 @@
     color: var(--white);
   }
 
-  #about-list {
+  #about-list{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -30,26 +30,37 @@
     padding: 0;
     margin: 0;
 
-    .odd-item {
-      background-color: var(--tangerine);
-      width: 90%;
-      max-width: 900px;
-      height: 225px;         
-      border-radius: 12px;
-      padding: 24px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+    .odd-item{
+        background-color: var(--tangerine);
+        max-width: 900px;
+        height: 225px;         
+        border-radius: 12px;
+        padding: 24px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
 
-      h4 {
+        @include helpers.lg {
+            width: 90%;
+        }
+
+        @include helpers.md {
+            width: 85%;
+        }
+
+        @include helpers.sm {
+            width: 90%;
+        }
+
+      h4{
         text-align: center;
         margin: 0 0 8px;
         font-size: 21px;
         color: var(--white);
       }
 
-      p {
+      p{
         margin: 0 auto;
         text-align: left;
         max-width: 90%;
@@ -58,7 +69,7 @@
         color: var(--white);
       }
 
-    a {
+    a{
         display: block;
         text-align: center;
         margin-top: 20px;
@@ -66,57 +77,68 @@
         color: var(--white);
         transition: color 0.3s;
 
-        &:hover {
+        &:hover{
             color: var(--lightGrey);
         }
       }
     }
 
-    .even-item {
-      background-color: var(--lightOrange);
-      width: 90%;
-      max-width: 900px;
-      height: 225px;         
-      border-radius: 12px;
-      padding: 24px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+    .even-item{
+        background-color: var(--lightOrange);
+        max-width: 900px;
+        height: 225px;         
+        border-radius: 12px;
+        padding: 24px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
 
-      h4 {
+        @include helpers.lg {
+            width: 90%;
+        }
+
+        @include helpers.md {
+            width: 80%;
+        }
+
+        @include helpers.sm {
+            width: 90%;
+        }
+
+        h4{
         text-align: center;
         margin: 0 0 8px;
         font-size: 21px;
         color: var(--darkPink);
-      }
+        }
 
-      p {
+        p{
         margin: 0 auto;
         text-align: left;
         max-width: 90%;
         font-size: 17px;
         line-height: 20px;
         color: var(--darkPink);
-      }
-
-    a {
-        display: block;
-        text-align: center;
-        margin-top: 20px;
-        color: var(--darkGreySlate);
-        line-height: 26px;
-        color: var(--darkPink);
-        transition: color 0.3s;
-
-        &:hover {
-            color: var(--reallyDarkPink);
         }
-      }
+
+        a{
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: var(--darkGreySlate);
+            line-height: 26px;
+            color: var(--darkPink);
+            transition: color 0.3s;
+
+            &:hover {
+                color: var(--reallyDarkPink);
+            }
+        }
     }
 
-    li {
-      img {
+    li{
+      img{
         width: 100%;
         max-height: 100px;
         object-fit: cover;

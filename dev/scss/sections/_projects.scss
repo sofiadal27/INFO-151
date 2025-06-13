@@ -34,23 +34,34 @@
                 color: var(--hotPink);
             }
 
-            img{
-                
+            img{                
                 width: 100%;
-                max-width: 500px;
+                max-width: 300px;
                 height: auto;
                 object-fit: cover;
                 display: block;
+                margin: 0 auto;
             }
 
-            .button {
+            #NRAO{
+                a{
+                    color: var(--hotPink);
+
+                    &:hover {
+                        color: var(--reallyDarkPink);
+                    }
+                }
+            }
+
+            .button{
                 display: inline-block;
                 background-color: var(--darkPink);
                 color: var(--white);
-                padding: 8px 8px;
+                padding: 12px 24px;
                 border-radius: 8px;
                 text-decoration: none;
                 font-weight: 600;
+                margin: 0 auto; 
                 transition: background-color 0.3s ease, box-shadow 0.3s ease;
 
                 &:hover {
@@ -59,16 +70,6 @@
 
                 &:active {
                     background-color: var(--black);
-                }
-            }
-
-            a{
-                padding: 0 130px;
-                color: var(--darkPink);
-                transition: color 0.3s;
-
-                &:hover {
-                    color: var(--reallyDarkPink);
                 }
             }
         }   
