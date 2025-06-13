@@ -11,5 +11,66 @@
     h1{
         margin-bottom: 32px;
         color: var(--hotPink);
+        text-align: center;
+    }
+
+    ul{
+        li{
+            background-color: var(--lighterPaleYellow);
+            padding: 32px;
+            border-radius: 16px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 32px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+
+            h2{
+                color: var(--hotPink);
+                margin-bottom: 8px;
+            }
+
+            p{
+                color: var(--hotPink);
+            }
+
+            img{
+                
+                width: 100%;
+                max-width: 500px;
+                height: auto;
+                object-fit: cover;
+                display: block;
+            }
+
+            .button {
+                display: inline-block;
+                background-color: var(--darkPink);
+                color: var(--white);
+                padding: 8px 8px;
+                border-radius: 8px;
+                text-decoration: none;
+                font-weight: 600;
+                transition: background-color 0.3s ease, box-shadow 0.3s ease;
+
+                &:hover {
+                    background-color: var(--reallyDarkPink);
+                }
+
+                &:active {
+                    background-color: var(--black);
+                }
+            }
+
+            a{
+                padding: 0 130px;
+                color: var(--darkPink);
+                transition: color 0.3s;
+
+                &:hover {
+                    color: var(--reallyDarkPink);
+                }
+            }
+        }   
     }
 }

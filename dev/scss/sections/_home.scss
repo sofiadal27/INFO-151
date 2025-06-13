@@ -3,64 +3,77 @@
 ============= */
 @use "../helpers";
 
-// #home{
-//     background-color: var(--paleYellow);
-//     padding: 56px 24px;
+#home{
+    background-color: var(--paleYellow);
+    padding: 56px 24px;
 
-//     section{
-
-//         h1{
-//             text-align: center;
-//             color: var(--hotPink);
-//         }
-
-//         p{
-//             text-align: center;
-//         }
-
-//     }
-
-//     aside{
-//         width: 300px;           // adjust as needed
-//         height: auto;
-//         border-radius: 12px;    // round corners (increase to 50% for a circle)
-//         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); // subtle shadow
-//         object-fit: cover;      // keeps it looking good if resized
-//     }
-// }
-
-#home {
-  background-color: var(--paleYellow);
-  padding: 56px 24px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 48px; // spacing between text and image
-
-  section {
-    flex: 1;
-
-    h1 {
-      text-align: center;
-      color: var(--hotPink);
+    @include helpers.sm{
+        display: grid;
+        grid-template-columns: "home-content"
+                                "home-aside";
     }
 
-    p {
-      text-align: center;
+    @include helpers.md{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 48px;
     }
-  }
 
-  aside {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-
-    img.img-scaler {
-      width: 400px;
-      height: auto;
-      border-radius: 12px;
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    @include helpers.lg{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 64px;
     }
-  }
+
+    section{
+
+        @include helpers.sm{
+            grid-areas: "home-content";
+        }   
+
+        flex: 1;
+
+        h1{
+            text-align: center;
+            color: var(--hotPink);
+            margin-bottom: 20px;
+        }
+
+        p{
+            text-align: center;
+        }
+    }
+
+    aside{
+        @include helpers.sm{
+            grid-areas: "home-aside";
+        }
+
+        flex: 1;
+        display: flex;
+        justify-content: center;
+
+        img.img-scaler{
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+
+            @include helpers.sm{
+                width: 100%;
+                max-width: 300px;
+            }
+
+            @include helpers.md{
+                width: 100%;
+                max-width: 400px;
+            }
+
+            @include helpers.lg{
+                width: 100%;
+                max-width: 500px;
+            }
+        }
+    }
 }

@@ -344,6 +344,7 @@ template {
   --darkPink: #f13b93;
   --lightGrey: #cccccc;
   --reallyDarkPink: #b30059;
+  --lighterPaleYellow: #fefec9;
 }
 
 /* ---------------- Font Sizing ---------------- */
@@ -415,25 +416,57 @@ textarea {
 #home {
   background-color: var(--paleYellow);
   padding: 56px 24px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  gap: 48px;
+}
+@media (min-width: 576px) {
+  #home {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: "home-content" "home-aside";
+    grid-template-columns: "home-content" "home-aside";
+  }
+}
+@media (min-width: 768px) {
+  #home {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 48px;
+  }
+}
+@media (min-width: 992px) {
+  #home {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 64px;
+  }
 }
 #home section {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
 }
+@media (min-width: 576px) {
+  #home section {
+    grid-areas: "home-content";
+  }
+}
 #home section h1 {
   text-align: center;
   color: var(--hotPink);
+  margin-bottom: 20px;
 }
 #home section p {
   text-align: center;
@@ -449,12 +482,34 @@ textarea {
       -ms-flex-pack: center;
           justify-content: center;
 }
+@media (min-width: 576px) {
+  #home aside {
+    grid-areas: "home-aside";
+  }
+}
 #home aside img.img-scaler {
-  width: 400px;
   height: auto;
   border-radius: 12px;
   -webkit-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
           box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+@media (min-width: 576px) {
+  #home aside img.img-scaler {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+@media (min-width: 768px) {
+  #home aside img.img-scaler {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+@media (min-width: 992px) {
+  #home aside img.img-scaler {
+    width: 100%;
+    max-width: 500px;
+  }
 }
 
 /* =============
@@ -496,7 +551,7 @@ textarea {
   background-color: var(--tangerine);
   width: 90%;
   max-width: 900px;
-  height: 200px;
+  height: 225px;
   border-radius: 12px;
   padding: 24px;
   -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
@@ -542,7 +597,7 @@ textarea {
   background-color: var(--lightOrange);
   width: 90%;
   max-width: 900px;
-  height: 200px;
+  height: 225px;
   border-radius: 12px;
   padding: 24px;
   -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
@@ -667,6 +722,66 @@ textarea {
 #projects h1 {
   margin-bottom: 32px;
   color: var(--hotPink);
+  text-align: center;
+}
+#projects ul li {
+  background-color: var(--lighterPaleYellow);
+  padding: 32px;
+  border-radius: 16px;
+  -webkit-box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+}
+#projects ul li h2 {
+  color: var(--hotPink);
+  margin-bottom: 8px;
+}
+#projects ul li p {
+  color: var(--hotPink);
+}
+#projects ul li img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+}
+#projects ul li .button {
+  display: inline-block;
+  background-color: var(--darkPink);
+  color: var(--white);
+  padding: 8px 8px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  -webkit-transition: background-color 0.3s ease, -webkit-box-shadow 0.3s ease;
+  transition: background-color 0.3s ease, -webkit-box-shadow 0.3s ease;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, -webkit-box-shadow 0.3s ease;
+}
+#projects ul li .button:hover {
+  background-color: var(--reallyDarkPink);
+}
+#projects ul li .button:active {
+  background-color: var(--black);
+}
+#projects ul li a {
+  padding: 0 130px;
+  color: var(--darkPink);
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+#projects ul li a:hover {
+  color: var(--reallyDarkPink);
 }
 
 /* =============
@@ -692,6 +807,8 @@ textarea {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   gap: 24px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -699,6 +816,15 @@ textarea {
   list-style: none;
   padding: 0;
   margin: 0;
+}
+@media (min-width: 992px) {
+  #associations #association-list {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
 }
 #associations #association-list .odd-item {
   background-color: var(--tangerine);
@@ -718,7 +844,6 @@ textarea {
 }
 #associations #association-list .odd-item a {
   font-weight: 600;
-  padding: 0 130px;
   color: var(--white);
   -webkit-transition: color 0.3s;
   transition: color 0.3s;
@@ -744,7 +869,6 @@ textarea {
 }
 #associations #association-list .even-item a {
   font-weight: 600;
-  padding: 0 130px;
   color: var(--darkPink);
   -webkit-transition: color 0.3s;
   transition: color 0.3s;
