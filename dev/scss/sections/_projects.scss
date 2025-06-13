@@ -1,0 +1,15 @@
+/* =============
+    Projects
+============= */
+@use "../helpers";
+
+#projects{
+    background-color: var(--paleYellow);
+    text-align: center;
+    padding: 56px 24px;
+
+    h1{
+        margin-bottom: 32px;
+        color: var(--hotPink);
+    }
+}

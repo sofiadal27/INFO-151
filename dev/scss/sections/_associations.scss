@@ -4,19 +4,21 @@
 @use "../helpers";
 
 #associations{
-    background-color: var(--lightCyan);
+    background-color: var(--hotPink);
     padding: 56px 24px;
     margin: 0 auto;
 
-    h1 {
+    h1{
         text-align: center;
         margin-bottom: 32px;
-        color: var(--coolGrey);
+        color: var(--white);
     }
 
-    p {
+    p{
         text-align: center;
         margin-bottom: 32px;
+        font-size: 17px;
+        color: var(--white);
     }
 
     #association-list{
@@ -27,29 +29,74 @@
         padding: 0;
         margin: 0;
 
+        .odd-item{
+            background-color: var(--tangerine);
+
+            h3{
+                text-align: center;
+                margin-top: 0;
+                font-size: 21px;
+                color: var(--white);
+            }
+
+            p{
+                text-align: left;
+                line-height: 26px;
+                margin-top: 8px;
+                font-size: 17px;
+                color: var(--white);
+            }
+
+            a{
+                font-weight: 600;
+                padding: 0 130px;
+                color: var(--white);
+                transition: color 0.3s;
+
+                &:hover {
+                    color: var(--lightGrey);
+                }
+            }
+        }
+
+        .even-item{
+            background-color: var(--lightOrange);
+
+            h3{
+                text-align: center;
+                margin-top: 0;
+                font-size: 21px;
+                color: var(--darkPink);
+            }
+
+            p{
+                text-align: left;
+                line-height: 26px;
+                margin-top: 8px;
+                font-size: 17px;
+                color: var(--darkPink);
+            }
+
+            a{
+                font-weight: 600;
+                padding: 0 130px;
+                color: var(--darkPink);
+                transition: color 0.3s;
+
+                &:hover {
+                    color: var(--reallyDarkPink);
+                }
+            }
+        }
+
+
+
         li{
             flex: 1 1 400px;         
             max-width: 500px;
             border-radius: 10px;
             padding: 24px;
             box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-
-            h3{
-                margin-top: 0;
-                font-size: 21px;
-            }
-
-            p{
-                font-size: 16px;
-                line-height: 26px;
-                margin-top: 8px;
-            }
-
-            a{
-                display: inline-block;
-                margin-top: 12px;
-                font-weight: 600;
-            }
         }
     }
 }

@@ -4,17 +4,49 @@
 @use "../helpers";
 
 #contact{
-  text-align: center;
-  padding: 30px 20px;
+    background-color: var(--paleYellow);
+    text-align: center;
+    padding: 30px 20px;
 
-  h1{
-    font-size: 40px;
-    margin-bottom: 15px;
-  }
+    h1{
+        margin-bottom: 15px;
+        color: var(--hotPink);
+    }
 
-  p{
-    font-size: 19px;
-    margin-bottom: 20px;
-  }
+    p{
+        margin-bottom: 15px;
+        color: var(--hotPink);
+    }
+
+    .email{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        margin-bottom: 15px;
+        color: var(--hotPink)
+    }
+
+    a{
+        color: var(--hotPink);
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s;
+
+        &:hover {
+            color: var(--reallyDarkPink);
+        }
+    }
+
+    button{
+        background-color: var(--hotPink);
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s;
+
+        &:hover {
+            background-color: var(--reallyDarkPink);
+        }
+    }
 
 }

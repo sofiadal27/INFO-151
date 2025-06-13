@@ -317,16 +317,33 @@ template {
   --black: #000000;
   --white: #ffffff;
   --lightCyan: #e0ffff;
-  --grey: #808080;
+  --grey: #3f3f3f;
   --aqua: #00ffff;
-  --coolGrey: #8c92ac;
+  --coolGrey: #4d5269;
   --darkGreySlate: #2f4f4f;
   --darkMagenta: #8a0079;
   --royalPurple: #5d0178;
   --yaleBlue: #0f4c81;
   --cerulean: #007ba7;
-  --peach: #ffdab9;
-  --cream: #fffdd0;
+  --peach: #ffe4cf;
+  --offWhite: #f8f8f8;
+  --palePink: #fceef2;
+  --pastelPink: #f7c6c7;
+  --pastelPurple: #dbcae3;
+  --lilac: #e6e6fa;
+  --paleGreen: #dafeda;
+  --hotPink: #ff69b4;
+  --tangerine: #ff9b69;
+  --lightOrange: #ffcc99;
+  --gold: #ffd700;
+  --darkGold: #b8860b;
+  --paleYellow: #fefeb1;
+  --coral: #f79285;
+  --honeydew: #edcb8e;
+  --red: #ff0000;
+  --darkPink: #f13b93;
+  --lightGrey: #cccccc;
+  --reallyDarkPink: #b30059;
 }
 
 /* ---------------- Font Sizing ---------------- */
@@ -396,32 +413,280 @@ textarea {
     Home
 ============= */
 #home {
-  background-color: var(--lightCyan);
+  background-color: var(--paleYellow);
   padding: 56px 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 48px;
+}
+#home section {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 #home section h1 {
   text-align: center;
-  color: var(--coolGrey);
+  color: var(--hotPink);
 }
 #home section p {
   text-align: center;
 }
+#home aside {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+#home aside img.img-scaler {
+  width: 400px;
+  height: auto;
+  border-radius: 12px;
+  -webkit-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* =============
+    About
+============= */
+#about {
+  background-color: var(--hotPink);
+  padding: 56px 24px;
+}
+#about h1 {
+  text-align: center;
+  margin-bottom: 32px;
+  color: var(--white);
+}
+#about .intro {
+  text-align: center;
+  margin: 32px auto;
+  max-width: 800px;
+  font-size: 17px;
+  color: var(--white);
+}
+#about #about-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+#about #about-list .odd-item {
+  background-color: var(--tangerine);
+  width: 90%;
+  max-width: 900px;
+  height: 200px;
+  border-radius: 12px;
+  padding: 24px;
+  -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+#about #about-list .odd-item h4 {
+  text-align: center;
+  margin: 0 0 8px;
+  font-size: 21px;
+  color: var(--white);
+}
+#about #about-list .odd-item p {
+  margin: 0 auto;
+  text-align: left;
+  max-width: 90%;
+  font-size: 17px;
+  line-height: 20px;
+  color: var(--white);
+}
+#about #about-list .odd-item a {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  line-height: 26px;
+  color: var(--white);
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+#about #about-list .odd-item a:hover {
+  color: var(--lightGrey);
+}
+#about #about-list .even-item {
+  background-color: var(--lightOrange);
+  width: 90%;
+  max-width: 900px;
+  height: 200px;
+  border-radius: 12px;
+  padding: 24px;
+  -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+#about #about-list .even-item h4 {
+  text-align: center;
+  margin: 0 0 8px;
+  font-size: 21px;
+  color: var(--darkPink);
+}
+#about #about-list .even-item p {
+  margin: 0 auto;
+  text-align: left;
+  max-width: 90%;
+  font-size: 17px;
+  line-height: 20px;
+  color: var(--darkPink);
+}
+#about #about-list .even-item a {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  color: var(--darkGreySlate);
+  line-height: 26px;
+  color: var(--darkPink);
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+#about #about-list .even-item a:hover {
+  color: var(--reallyDarkPink);
+}
+#about #about-list li img {
+  width: 100%;
+  max-height: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+/* =============
+    Resume
+============= */
+#resume {
+  background-color: var(--coral);
+  text-align: center;
+  padding: 56px 24px;
+}
+#resume h1 {
+  margin-bottom: 32px;
+  color: var(--white);
+}
+#resume #resume-content {
+  background-color: var(--offWhite);
+  text-align: left;
+  padding: 20px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  max-width: 850px;
+  border-radius: 8px;
+  -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+#resume #resume-content .resume-section {
+  margin-bottom: 20px;
+}
+#resume #resume-content .resume-section h2 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+#resume #resume-content .resume-section .employment-section {
+  margin-bottom: 10px;
+}
+#resume #resume-content .resume-section .employment-section a {
+  color: var(--coolGrey);
+}
+#resume #resume-content .resume-section .employment-section a:hover {
+  color: var(--black);
+}
+#resume #resume-content .resume-section .skills-section {
+  margin-bottom: 10px;
+}
+#resume .button {
+  display: inline-block;
+  background-color: var(--gold);
+  color: var(--white);
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  -webkit-transition: background-color 0.3s ease, -webkit-box-shadow 0.3s ease;
+  transition: background-color 0.3s ease, -webkit-box-shadow 0.3s ease;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, -webkit-box-shadow 0.3s ease;
+}
+#resume .button:hover {
+  background-color: var(--darkGold);
+}
+#resume .button:active {
+  background-color: var(--black);
+}
+
+/* =============
+    Projects
+============= */
+#projects {
+  background-color: var(--paleYellow);
+  text-align: center;
+  padding: 56px 24px;
+}
+#projects h1 {
+  margin-bottom: 32px;
+  color: var(--hotPink);
+}
+
 /* =============
     Associations
 ============= */
 #associations {
-  background-color: var(--lightCyan);
+  background-color: var(--hotPink);
   padding: 56px 24px;
   margin: 0 auto;
 }
 #associations h1 {
   text-align: center;
   margin-bottom: 32px;
-  color: var(--coolGrey);
+  color: var(--white);
 }
 #associations p {
   text-align: center;
   margin-bottom: 32px;
+  font-size: 17px;
+  color: var(--white);
 }
 #associations #association-list {
   display: -webkit-box;
@@ -435,6 +700,58 @@ textarea {
   padding: 0;
   margin: 0;
 }
+#associations #association-list .odd-item {
+  background-color: var(--tangerine);
+}
+#associations #association-list .odd-item h3 {
+  text-align: center;
+  margin-top: 0;
+  font-size: 21px;
+  color: var(--white);
+}
+#associations #association-list .odd-item p {
+  text-align: left;
+  line-height: 26px;
+  margin-top: 8px;
+  font-size: 17px;
+  color: var(--white);
+}
+#associations #association-list .odd-item a {
+  font-weight: 600;
+  padding: 0 130px;
+  color: var(--white);
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+#associations #association-list .odd-item a:hover {
+  color: var(--lightGrey);
+}
+#associations #association-list .even-item {
+  background-color: var(--lightOrange);
+}
+#associations #association-list .even-item h3 {
+  text-align: center;
+  margin-top: 0;
+  font-size: 21px;
+  color: var(--darkPink);
+}
+#associations #association-list .even-item p {
+  text-align: left;
+  line-height: 26px;
+  margin-top: 8px;
+  font-size: 17px;
+  color: var(--darkPink);
+}
+#associations #association-list .even-item a {
+  font-weight: 600;
+  padding: 0 130px;
+  color: var(--darkPink);
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+#associations #association-list .even-item a:hover {
+  color: var(--reallyDarkPink);
+}
 #associations #association-list li {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 400px;
@@ -445,33 +762,54 @@ textarea {
   -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
           box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
-#associations #association-list li h3 {
-  margin-top: 0;
-  font-size: 21px;
-}
-#associations #association-list li p {
-  font-size: 16px;
-  line-height: 26px;
-  margin-top: 8px;
-}
-#associations #association-list li a {
-  display: inline-block;
-  margin-top: 12px;
-  font-weight: 600;
-}
 
 /* =============
     Contact
 ============= */
 #contact {
+  background-color: var(--paleYellow);
   text-align: center;
   padding: 30px 20px;
 }
 #contact h1 {
-  font-size: 40px;
   margin-bottom: 15px;
+  color: var(--hotPink);
 }
 #contact p {
-  font-size: 19px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
+  color: var(--hotPink);
+}
+#contact .email {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 12px;
+  margin-bottom: 15px;
+  color: var(--hotPink);
+}
+#contact a {
+  color: var(--hotPink);
+  text-decoration: none;
+  font-weight: bold;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+#contact a:hover {
+  color: var(--reallyDarkPink);
+}
+#contact button {
+  background-color: var(--hotPink);
+  text-decoration: none;
+  font-weight: bold;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+#contact button:hover {
+  background-color: var(--reallyDarkPink);
 }

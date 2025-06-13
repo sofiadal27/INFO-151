@@ -1,0 +1,70 @@
+/* =============
+    Resume
+============= */
+@use "../helpers";
+
+#resume {
+    background-color: var(--coral);
+    text-align: center;
+    padding: 56px 24px;
+
+    h1{
+        margin-bottom: 32px;
+        color: var(--white);
+    }
+
+    #resume-content{
+        background-color: var(--offWhite);
+        text-align: left;
+        padding: 20px;;
+        margin: 0 auto;
+        margin-bottom: 30px;
+        max-width: 850px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+        .resume-section{
+            margin-bottom: 20px;
+
+            h2{
+                text-align: center;
+                margin-bottom: 10px;
+            }
+
+            .employment-section{
+                margin-bottom: 10px;
+
+                a{
+                    color: var(--coolGrey);
+
+                    &:hover {
+                        color: var(--black);
+                    }
+                }
+            }
+
+            .skills-section{
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    .button {
+        display: inline-block;
+        background-color: var(--gold);
+        color: var(--white);
+        padding: 12px 24px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+
+        &:hover {
+            background-color: var(--darkGold);
+        }
+
+        &:active {
+            background-color: var(--black);
+        }
+    }
+}
